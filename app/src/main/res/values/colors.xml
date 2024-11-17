@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_200">#C7F8BB</color>
+    <color name="green_500">#4AC253</color>
+    <color name="green_700">#258B3F</color>
+    <color name="secondary_green_200">#E7F4DF</color>
+    <color name="secondary_green_500">#7C9877</color>
+    <color name="secondary_green_700">#3B6D3C</color>
+    <color name="teal_200">#C1F6EE</color>
+    <color name="teal_500">#4D9CA5</color>
+    <color name="teal_700">#266176</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="placeholder">#999E9E9E</color>
+    <color name="google_btn_neutral">#F2F2F2</color>
+    <color name="google_btn_font_night">#E3E3E3</color>
+    <color name="google_btn_font_day">#1F1F1F</color>
+    <color name="google_btn_stroke_day">#747775</color>
+    <color name="google_btn_stroke_night">#8E918F</color>
+</resources>
