@@ -9,33 +9,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ui.signup.SignUpActivity">
+    tools:context=".view.login.LoginActivity">
 
     <TextView
-        android:id="@+id/tv_title_signup"
+        android:id="@+id/tv_title_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
-        android:text="@string/signup"
+        android:text="@string/title_welcome"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_title_have_an_account"
+        android:id="@+id/tv_title_not_have_an_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/have_account"
+        android:text="@string/not_have_an_account"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_signup" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_login" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_register_here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -44,110 +44,30 @@
         android:minWidth="0dp"
         android:minHeight="48dp"
         android:padding="0dp"
-        android:text="@string/login"
-        android:textColor="@color/green_500"
+        android:text="@string/register_here"
+        android:textColor="@color/md_theme_primary"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_full_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:text="@string/full_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_have_an_account" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ov_full_name"
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/full_name_placeholder"
-        android:textColorHint="@color/placeholder"
-        android:padding="4dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        app:boxCornerRadiusBottomEnd="8dp"
-        app:boxCornerRadiusBottomStart="8dp"
-        app:boxCornerRadiusTopEnd="8dp"
-        app:boxCornerRadiusTopStart="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_full_name">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_full_name"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            app:endIconMode="clear_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_full_name" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/tv_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="@string/username"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ov_full_name" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ov_username"
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/username_placeholder"
-        android:textColorHint="@color/placeholder"
-        android:padding="4dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        app:boxCornerRadiusBottomEnd="8dp"
-        app:boxCornerRadiusBottomStart="8dp"
-        app:boxCornerRadiusTopEnd="8dp"
-        app:boxCornerRadiusTopStart="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_username" >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_username"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            app:endIconMode="clear_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_username" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
         android:id="@+id/tv_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="@string/email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ov_username" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_not_have_an_account" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ov_email"
         style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/email_placeholder"
         android:padding="4dp"
         android:paddingTop="16dp"
@@ -175,7 +95,7 @@
         android:id="@+id/tv_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="@string/password"
@@ -187,8 +107,8 @@
         style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/password_placeholder"
         android:padding="4dp"
         android:paddingTop="16dp"
@@ -206,25 +126,40 @@
             android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:inputType="textEmailAddress"
-            app:endIconMode="clear_text"
+            android:inputType="textPassword"
+            app:endIconMode="password_toggle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_password" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_signup"
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="#00FFFFFF"
+        android:minWidth="0dp"
+        android:minHeight="48dp"
+        android:padding="0dp"
+        android:text="@string/forgot_password"
+        android:textColor="@color/md_theme_primary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ov_password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
-        android:text="@string/signup"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
         android:padding="8dp"
+        android:text="@string/title_login"
         app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ov_password" />
+        app:layout_constraintTop_toBottomOf="@id/tv_forgot_password" />
 
     <TextView
         android:id="@+id/tv_or"
@@ -234,18 +169,18 @@
         android:text="@string/or"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signup" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <Button
         android:id="@+id/btn_sign_in_with_google"
         style="@style/Widget.App.Button.GoogleButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="36dp"
         android:padding="4dp"
-        android:text="@string/google_signup"
+        android:text="@string/google_login"
         app:cornerRadius="12dp"
         app:icon="@drawable/google_logo"
         app:iconGravity="textStart"
