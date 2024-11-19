@@ -21,10 +21,6 @@
             android:name=".view.signup.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".view.login.SignUpActivity"
-            android:exported="false"
-            android:label="@string/title_activity_sign_up" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
