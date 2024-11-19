@@ -45,7 +45,7 @@
         android:minHeight="48dp"
         android:padding="0dp"
         android:text="@string/register_here"
-        android:textColor="@color/green_500"
+        android:textColor="@color/md_theme_primary"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -142,7 +142,7 @@
         android:minHeight="48dp"
         android:padding="0dp"
         android:text="@string/forgot_password"
-        android:textColor="@color/green_500"
+        android:textColor="@color/md_theme_primary"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
