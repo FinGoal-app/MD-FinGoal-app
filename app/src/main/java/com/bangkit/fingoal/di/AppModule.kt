@@ -18,7 +18,6 @@ val Context.dataStore: DataStore<Preferences> by preferencesDataStore(
 )
 
 @Module
-@InstallIn(SingletonComponent::class)
 object AppModule {
 
     @Provides
@@ -31,7 +30,6 @@ object AppModule {
             .build()
         val retrofit = Retrofit.Builder()
             .baseUrl(UserApi.BASE_URL)
-            .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
