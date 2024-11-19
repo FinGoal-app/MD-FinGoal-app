@@ -1,4 +1,4 @@
-package com.bangkit.fingoal.ui.signup
+package com.bangkit.fingoal.view.signup
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

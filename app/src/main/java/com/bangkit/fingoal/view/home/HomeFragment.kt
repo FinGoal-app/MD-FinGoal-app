@@ -1,4 +1,4 @@
-package com.bangkit.fingoal.ui.home
+package com.bangkit.fingoal.view.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

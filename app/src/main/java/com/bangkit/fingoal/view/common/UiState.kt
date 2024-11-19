@@ -1,4 +1,4 @@
-package com.bangkit.fingoal.ui.common
+package com.bangkit.fingoal.view.common
 
 sealed class UiState<T>(
     val data: T? = null,

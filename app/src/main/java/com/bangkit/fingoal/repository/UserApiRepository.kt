@@ -5,7 +5,7 @@ import com.bangkit.fingoal.data.model.UserRegisterInfo
 import com.bangkit.fingoal.data.remote.apiService.UserApi
 import com.bangkit.fingoal.data.remote.response.UserLoginResponse
 import com.bangkit.fingoal.data.remote.response.UserRegisterResponse
-import com.bangkit.fingoal.ui.common.UiState
+import com.bangkit.fingoal.view.common.UiState
 import javax.inject.Inject
 
 class UserApiRepository @Inject constructor(
