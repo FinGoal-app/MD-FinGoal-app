@@ -1,12 +1,13 @@
-package com.bangkit.fingoal
+package com.bangkit.fingoal.view.main
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.bangkit.fingoal.R
 import com.bangkit.fingoal.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
