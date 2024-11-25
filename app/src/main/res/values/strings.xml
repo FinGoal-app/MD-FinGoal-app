@@ -25,6 +25,9 @@
     <string name="title_name">Full name</string>
     <string name="empty_name_warning">Field cannot be empty</string>
     <string name="title_signup">Register</string>
+    <string name="google_signup">Sign up with Google</string>
     <string name="signup_success">You have successfully created your account</string>
     <string name="signup_failed">Failed to create account. Please try again.</string>
+    
+    <string name="hello_blank_fragment">Hello, this is fragment</string>
 </resources>
