@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="56dp"
         android:gravity="center"
         android:text="@string/email"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +84,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_email"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="56dp"
             android:inputType="textEmailAddress"
             app:endIconMode="clear_text"
             app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +125,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_password"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="56dp"
             android:inputType="textPassword"
             app:endIconMode="password_toggle"
             app:layout_constraintStart_toStartOf="parent"
