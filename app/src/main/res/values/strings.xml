@@ -4,29 +4,27 @@
     <string name="title_budget">Budget</string>
     <string name="title_goals">Goals</string>
 
-    <!-- Register page -->
-    <string name="have_account">Already have an account?</string>
-    <string name="login_here">Login here</string>
-    <string name="full_name">Full Name</string>
-    <string name="full_name_placeholder">Enter your full name</string>
-    <string name="username">Username</string>
-    <string name="username_placeholder">Enter your username</string>
-    <string name="email">Email</string>
-    <string name="email_placeholder">Enter your email</string>
-    <string name="password">Password</string>
-    <string name="password_placeholder">Enter your password</string>
-    <string name="title_create_account">Create your account</string>
-    <string name="title_signup">Sign Up</string>
-    <string name="google_signup">Sign up with Google</string>
-    <string name="or">or</string>
-
-    <!-- Login page -->
+    <!-- Login Activity -->
     <string name="title_welcome">Login to your account</string>
-    <string name="title_login">Login</string>
     <string name="not_have_an_account">Don\'t have an account yet?</string>
     <string name="register_here">Register here</string>
-    <string name="forgot_password">Forgot Password?</string>
-    <string name="google_login">Login with Google</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_email">Email</string>
+    <string name="title_password">Password</string>
+    <string name="title_login">Login</string>
+    <string name="invalid_email">Invalid email format</string>
+    <string name="invalid_password">Password must be at least 8 characters</string>
+    <string name="login_success">You have successfully logged in</string>
+    <string name="login_failed">Failed to login. Please check your username and password again.</string>
+    <string name="or">or</string>
+    <string name="google_login">Sign in with Google</string>
+
+    <!-- Register Activity -->
+    <string name="title_register">Create your account</string>
+    <string name="have_an_account">Already have an account?</string>
+    <string name="login_here">Login here</string>
+    <string name="title_name">Full name</string>
+    <string name="empty_name_warning">Field cannot be empty</string>
+    <string name="title_signup">Register</string>
+    <string name="signup_success">You have successfully created your account</string>
+    <string name="signup_failed">Failed to create account. Please try again.</string>
 </resources>
