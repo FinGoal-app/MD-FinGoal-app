@@ -2,6 +2,8 @@ package com.bangkit.fingoal.data.repository
 
 import com.bangkit.fingoal.data.pref.UserModel
 import com.bangkit.fingoal.data.pref.UserPreference
+import com.bangkit.fingoal.data.response.LoginResponse
+import com.bangkit.fingoal.data.response.RegisterResponse
 import com.bangkit.fingoal.data.retrofit.ApiService
 import kotlinx.coroutines.flow.Flow
 
@@ -9,11 +11,11 @@ class UserRepository(
     private val apiService: ApiService,
     private val pref: UserPreference
 ) {
-    suspend fun register(name: String, email: String, password: String): RegisterResponse {
+    suspend fun postRegister(name: String, email: String, password: String): RegisterResponse {
         return apiService.register(name, email, password)
     }
 
-    suspend fun login(email: String, password: String): LoginResponse {
+    suspend fun postLogin(email: String, password: String): LoginResponse {
         return apiService.login(email, password)
     }
 
