@@ -1,0 +1,140 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+
+    <!-- Input Anggaran -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_green_background"
+        android:paddingHorizontal="16dp"
+        android:translationY="-9dp">
+
+        <!-- Text Header -->
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/increase_budget"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Tombol Back -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back_button_description"
+            android:src="@drawable/ic_back"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/how_much_budget"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/et_budget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rp."
+        android:inputType="number"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Kategori Dropdown -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/category"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Jenis Anggaran Dropdown -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/budget_type"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:id="@+id/spinner_budget_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Pilih Tanggal -->
+    <TextView
+        android:id="@+id/tvPilihBulan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/choose_date"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etTanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/choose_date"
+        android:inputType="none"
+        android:drawableEnd="@drawable/ic_calendar"
+        android:clickable="true"
+        android:focusable="false"
+        android:layout_marginTop="8dp"
+        style="@style/EditTextUnderlineStyle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Tombol Simpan -->
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/green"
+        android:gravity="center"
+        android:text="@string/save_button"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>
