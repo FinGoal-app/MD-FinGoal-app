@@ -1,4 +1,4 @@
-package com.dicoding.storyapp.view.activities.auth.register
+package com.bangkit.fingoal.view.activities.register
 
 import android.content.Intent
 import android.os.Build
@@ -12,16 +12,16 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.dicoding.storyapp.R
-import com.dicoding.storyapp.data.repository.Result
-import com.dicoding.storyapp.databinding.ActivityRegisterBinding
-import com.dicoding.storyapp.view.activities.ViewModelFactory
-import com.dicoding.storyapp.view.activities.auth.login.Login
-import com.dicoding.storyapp.view.customview.Button
-import com.dicoding.storyapp.view.customview.EmailEditText
-import com.dicoding.storyapp.view.customview.PasswordEditText
+import com.bangkit.fingoal.R
+import com.bangkit.fingoal.data.repository.Result
+import com.bangkit.fingoal.databinding.ActivityRegisterBinding
+import com.bangkit.fingoal.view.ViewModelFactory
+import com.bangkit.fingoal.view.activities.login.LoginActivity
+import com.bangkit.fingoal.view.customview.Button
+import com.bangkit.fingoal.view.customview.EmailEditText
+import com.bangkit.fingoal.view.customview.PasswordEditText
 
-class Register : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
     private val viewModel by viewModels<RegisterViewModel> {
         ViewModelFactory.getInstance(this)
     }
@@ -155,14 +155,14 @@ class Register : AppCompatActivity() {
             val name = binding.edRegisterName.text.toString()
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
-            viewModel.register(name, email, password)
+            // viewModel.register(name, email, password)
 
             viewModel.registerResult.observe(this) { result ->
                 binding.progressIndicator.visibility = View.VISIBLE
                 when (result) {
                     is Result.Success -> {
                         Toast.makeText(this, getString(R.string.signup_success), Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, Login::class.java)
+                        val intent = Intent(this, LoginActivity::class.java)
                         startActivity(intent)
                         finish()
                     }
@@ -182,7 +182,7 @@ class Register : AppCompatActivity() {
         }
 
         binding.btnLoginHere.setOnClickListener {
-            val intent = Intent(this, Login::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }

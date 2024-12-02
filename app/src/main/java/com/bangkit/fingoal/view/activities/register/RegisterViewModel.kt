@@ -1,20 +1,18 @@
-package com.dicoding.storyapp.view.activities.auth.register
+package com.bangkit.fingoal.view.activities.register
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dicoding.storyapp.data.repository.Result
-import com.dicoding.storyapp.data.repository.AuthRepository
-import com.dicoding.storyapp.data.response.ErrorResponse
-import com.dicoding.storyapp.data.response.RegisterResponse
+import com.bangkit.fingoal.data.repository.Result
+import com.bangkit.fingoal.data.repository.UserRepository
+import com.bangkit.fingoal.data.response.RegisterResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 
 class RegisterViewModel(
-    private val authRepository: AuthRepository
+    private val userRepository: UserRepository
 ): ViewModel() {
 
     private val _isLoading = MutableLiveData<Boolean>()
@@ -29,12 +27,12 @@ class RegisterViewModel(
     private val _registerResult = MutableLiveData<Result<RegisterResponse>>()
     val registerResult: LiveData<Result<RegisterResponse>> = _registerResult
 
-    fun register(name: String, email: String, password: String) {
+    /* fun register(name: String, email: String, password: String) {
         _isLoading.value = true
         _isError.value = null
         viewModelScope.launch {
             try {
-                val response = authRepository.postRegister(name, email, password)
+                val response = userRepository.postRegister(name, email, password)
                 when {
                     response.error == false -> {
                         _isSuccess.value = true
@@ -53,5 +51,5 @@ class RegisterViewModel(
                 _isLoading.value = false
             }
         }
-    }
+    } */
 }

@@ -6,15 +6,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.bangkit.fingoal.data.pref.UserModel
-import com.bangkit.fingoal.data.repository.AuthRepository
-import com.bangkit.fingoal.data.response.ErrorResponse
+import com.bangkit.fingoal.data.repository.UserRepository
 import com.bangkit.fingoal.data.response.LoginResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 
 class LoginViewModel(
-    private val authRepository: AuthRepository
+    private val userRepository: UserRepository
 ) : ViewModel() {
 
     private val _isSuccess = MutableLiveData<Boolean>()
@@ -29,12 +28,12 @@ class LoginViewModel(
     private val _loginResult = MutableLiveData<Result<LoginResponse>>()
     val loginResult: LiveData<Result<LoginResponse>> = _loginResult
 
-    fun login(email: String, password: String) {
+    /* fun login(email: String, password: String) {
         _isLoading.value = true
         _isError.value = null
         viewModelScope.launch {
             try {
-                val loginResponse = authRepository.postLogin(email, password)
+                val loginResponse = userRepository.postLogin(email, password)
                 when {
                     loginResponse.loginResult != null -> {
                         saveSession(
@@ -72,5 +71,5 @@ class LoginViewModel(
 
     fun getSession(): LiveData<UserModel> {
         return authRepository.getLoginState().asLiveData()
-    }
+    } */
 }

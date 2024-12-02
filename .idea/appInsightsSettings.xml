@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.bangkit.fingoal" />
+                  <option name="mobileSdkAppId" value="1:1005039607765:android:02f8afa51e8693d87a675c" />
+                  <option name="projectId" value="fin-goal-bc19c" />
+                  <option name="projectNumber" value="1005039607765" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

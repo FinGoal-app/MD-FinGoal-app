@@ -15,10 +15,37 @@
         android:theme="@style/Theme.FinGoal"
         tools:targetApi="31">
         <activity
+            android:name=".view.activities.goals.AddGoalsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activities.intro.IntroActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activities.intro.GetStartedActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".view.activities.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.register.SignUpActivity"
+            android:name=".view.activities.register.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".view.main.MainActivity"

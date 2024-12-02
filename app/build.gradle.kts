@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -17,7 +18,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "BASE_URL", "")
+        buildConfigField("String", "BASE_URL", "\"https://test.com\"")
     }
 
     buildTypes {
@@ -56,6 +57,8 @@ dependencies {
     implementation("androidx.annotation:annotation:1.9.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    implementation("com.google.firebase:firebase-auth:23.1.0")
+    implementation("androidx.activity:activity:1.9.3")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
@@ -81,4 +84,15 @@ dependencies {
 
     // Google Play Services
     implementation("com.google.android.gms:play-services-auth:21.2.0")
+
+    // Pie chart
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    // Viewpager Indicator
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
+
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
 }

@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
 
-    private const val BASE_URL = "BuildConfig.BASE_URL"
+    private const val BASE_URL = "http://test.com"
 
     fun getApiService(token: String): ApiService {
         val loggingInterceptor = if (BuildConfig.DEBUG) {

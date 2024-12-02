@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="green">#4AC253</color>
+
     <!-- Light theme. -->
     <color name="md_theme_primary">#3B693A</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>
