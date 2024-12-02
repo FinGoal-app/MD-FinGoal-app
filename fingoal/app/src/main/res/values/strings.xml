@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">fingoal</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- Skip Button -->
+    <string name="skip_button">Lewati</string>
+    <!-- Image Descriptions -->
+    <string name="illustration_1">Illustration for intro 1</string>
+    <string name="illustration_2">Illustration for intro 2</string>
+    <string name="illustration_3">Illustration for intro 3</string>
+    <!-- Titles -->
+    <string name="intro_title_1">Selamat Datang teman Fingoal!</string>
+    <string name="intro_title_2">Kelola dan Pantau Uangmu</string>
+    <string name="intro_title_3">Capai Impian Finansialmu</string>
+    <!-- Subtitles -->
+    <string name="intro_subtitle_1">Aplikasi ini akan membantu kamu mencapai tujuan finansial dengan lebih mudah.</string>
+    <string name="intro_subtitle_2">Buat kategori anggaran yang kamu inginkan dan mulai mencatat pengeluaran.</string>
+    <string name="intro_subtitle_3">Bersama FinGoal,wujudkan target keuanganmu dan nikmati hasilnya!.</string>
+    <!-- Back Button -->
+    <string name="back_navigation">Back</string>
+    <!-- Form Labels -->
+    <string name="label_choose_savings">Pilih Tabungan</string>
+    <string name="label_budget">Berapa Anggaran kamu</string>
+    <string name="label_choose_month">Pilih Bulan</string>
+    <string name="label_description">Keterangan</string>
+    <!-- Placeholder Text -->
+    <string name="hint_budget">Enter your budget</string>
+    <string name="hint_description">Enter your description</string>
+    <!-- Button Text -->
+    <string name="button_save">Simpan</string>
+    <string name="simpan">Save</string>
+    <!-- Spinner Dropdown Options (example options for months) -->
+    <string name="expense_header">Expense</string>
+    <string name="berapa_anggaran">Berapa Anggaran kamu</string>
+    <string name="enter_budget">Enter your budget</string>
+    <string name="pilih_kategori">Pilih Kategori</string>
+    <string name="pilih_tanggal">Pilih Tanggal</string>
+    <string name="hint_pilih_tanggal">Pilih Tanggal</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="hint_keterangan">Enter your description</string>
+    <string name="savings">Savings</string>
+    <string name="select_savings">Pilih Tabungan</string>
+    <string name="budget_question">Berapa Anggaran kamu</string>
+    <string name="enter_budget_hint">Enter your budget</string>
+    <string name="select_date">Pilih Tanggal</string>
+    <string name="select_date_hint">Pilih Tanggal</string>
+    <string name="description">Keterangan</string>
+    <string name="enter_description_hint">Enter your description</string>
+    <string name="save">Simpan</string>
+    <string name="header_Income">Income</string>
+    <string name="pilih_tabungan">Pilih Tabungan</string>
+    <string name="hint_anggaran">Enter your budget</string>
+    <string name="hint_tanggal">Pilih Tanggal</string>
+    <string name="your_goals">Your goals</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="tujuan">Tujuan</string>
+    <string name="hint_tujuan">Tulis Tujuanmu</string>
+    <string name="pilih_bulan">Pilih Bulan</string>
+    <string name="hint_pilih_bulan">Pilih Bulan</string>
+    <string name="open_calendar">Open Calendar</string>
+    <string name="increase_budget">Increase the budget</string>
+    <string name="back_button_description">Back</string>
+    <string name="how_much_budget">Berapa Anggaran kamu</string>
+    <string name="category">Kategori</string>
+    <string name="budget_type">Jenis Anggaran</string>
+    <string name="choose_date">Pilih Tanggal</string>
+    <string name="save_button">Simpan</string>
+
+</resources>
