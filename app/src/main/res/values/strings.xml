@@ -15,7 +15,8 @@
     <string name="invalid_password">Password must be at least 8 characters</string>
     <string name="login_success">You have successfully logged in</string>
     <string name="login_failed">Failed to login. Please check your username and password again.</string>
-    <string name="or">or</string>
+    <string name="or">or</string>\
+    <string name="default_web_client_id">1005039607765-r33t9mfa19me0np7sv2tds86rbiuf0if.apps.googleusercontent.com</string>
     <string name="google_login">Sign in with Google</string>
 
     <!-- Register Activity -->
@@ -28,6 +29,88 @@
     <string name="google_signup">Sign up with Google</string>
     <string name="signup_success">You have successfully created your account</string>
     <string name="signup_failed">Failed to create account. Please try again.</string>
-    
+
+    <!-- Toolbar Menu -->
+    <string name="title_profile">Profile</string>
+    <string name="titlemenu_budget">Manage Budget</string>
+
+    <!-- Welcome Activity -->
+    <string name="start">Let\'s Start</string>
+    <string name="get_started">Get Started</string>
+    <string name="welcome">Welcome to FinGoal</string>
+
+    <!-- Goals Activity -->
+    <string name="empty_goals">No goals yet! Le\'ts start managing your goals!</string>
+    <string name="add_goals">Add Goal</string>
+    <string name="goal_name">Goal name</string>
+    <string name="progress">Financial progress</string>
+
+    <!-- Skip Button -->
+    <string name="skip_button">Skip</string>
+    <string name="next">Continue</string>
+    <!-- Image Descriptions -->
+    <string name="illustration_1">Illustration for intro 1</string>
+    <string name="illustration_2">Illustration for intro 2</string>
+    <string name="illustration_3">Illustration for intro 3</string>
+    <!-- Titles -->
+    <string name="intro_title_1">Welcome, FinGoal\'s Friends!</string>
+    <string name="intro_title_2">Manage and Track Your Finances</string>
+    <string name="intro_title_3">Achieve Your Financial Goals</string>
+    <!-- Subtitles -->
+    <string name="intro_subtitle_1">This app is designed to help you manage your finances.</string>
+    <string name="intro_subtitle_2">Set up your desired budget categories and start keeping track of your expenses.</string>
+    <string name="intro_subtitle_3">With FinGoal, realize your financial goals and enjoy the results!</string>
+    <!-- Back Button -->
+    <string name="back_navigation">Back</string>
+    <!-- Form Labels -->
+    <string name="label_choose_savings">Pilih Tabungan</string>
+    <string name="label_budget">Berapa Anggaran kamu</string>
+    <string name="label_choose_month">Pilih Bulan</string>
+    <string name="label_description">Keterangan</string>
+    <!-- Placeholder Text -->
+    <string name="hint_budget">Enter your budget</string>
+    <string name="hint_description">Enter your description</string>
+    <!-- Button Text -->
+    <string name="button_save">Simpan</string>
+    <string name="simpan">Save</string>
+    <!-- Spinner Dropdown Options (example options for months) -->
+    <string name="expense_header">Expense</string>
+    <string name="berapa_anggaran">Berapa Anggaran kamu</string>
+    <string name="enter_budget">Enter your budget</string>
+    <string name="pilih_kategori">Pilih Kategori</string>
+    <string name="pilih_tanggal">Pilih Tanggal</string>
+    <string name="hint_pilih_tanggal">Pilih Tanggal</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="hint_keterangan">Enter your description</string>
+    <string name="savings">Savings</string>
+    <string name="select_savings">Pilih Tabungan</string>
+    <string name="budget_question">Berapa Anggaran kamu</string>
+    <string name="enter_budget_hint">Enter your budget</string>
+    <string name="select_date">Pilih Tanggal</string>
+    <string name="select_date_hint">Pilih Tanggal</string>
+    <string name="description">Keterangan</string>
+    <string name="enter_description_hint">Enter your description</string>
+    <string name="save">Simpan</string>
+    <string name="header_Income">Income</string>
+    <string name="pilih_tabungan">Pilih Tabungan</string>
+    <string name="hint_anggaran">Enter your budget</string>
+    <string name="hint_tanggal">Pilih Tanggal</string>
+    <string name="your_goals">Your goals</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="set_goals">Select a goal</string>
+    <string name="make_own">Make your own</string>
+    <string name="hint_tujuan">Tulis Tujuanmu</string>
+    <string name="pilih_bulan">Pilih Bulan</string>
+    <string name="hint_pilih_bulan">Pilih Bulan</string>
+    <string name="open_calendar">Open Calendar</string>
+    <string name="increase_budget">Increase the budget</string>
+    <string name="back_button_description">Back</string>
+    <string name="how_much_budget">Berapa Anggaran kamu</string>
+    <string name="category">Kategori</string>
+    <string name="budget_type">Jenis Anggaran</string>
+    <string name="choose_date">Pilih Tanggal</string>
+    <string name="save_button">Simpan</string>
+
+
     <string name="hello_blank_fragment">Hello, this is fragment</string>
 </resources>
