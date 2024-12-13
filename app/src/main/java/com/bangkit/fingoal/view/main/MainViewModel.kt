@@ -13,4 +13,12 @@ class MainViewModel(
     fun getSession(): LiveData<UserModel> {
         return userRepository.getLoginState().asLiveData()
     }
+
+    fun getToken(): LiveData<String> {
+        return userRepository.getToken().asLiveData()
+    }
+
+    fun getUsername(): LiveData<String> {
+        return userRepository.getUsername().asLiveData()
+    }
 }

@@ -1,5 +1,6 @@
 package com.bangkit.fingoal.view.activities.login
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,10 +8,13 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.bangkit.fingoal.data.pref.UserModel
 import com.bangkit.fingoal.data.repository.UserRepository
-import com.bangkit.fingoal.data.response.LoginResponse
+import com.bangkit.fingoal.data.response.ErrorResponse
+import com.bangkit.fingoal.data.response.User
+import com.bangkit.fingoal.data.retrofit.LoginRequest
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
+import java.net.SocketTimeoutException
 
 class LoginViewModel(
     private val userRepository: UserRepository
@@ -22,54 +26,56 @@ class LoginViewModel(
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
-    private val _isError = MutableLiveData<String?>()
-    val isError: LiveData<String?> = _isError
+    private val _user = MutableLiveData<User>()
+    val user: LiveData<User> = _user
 
-    private val _loginResult = MutableLiveData<Result<LoginResponse>>()
-    val loginResult: LiveData<Result<LoginResponse>> = _loginResult
+    private val _loginResult = MutableLiveData<String?>()
+    val loginResult: LiveData<String?> = _loginResult
 
-    /* fun login(email: String, password: String) {
+    fun login(loginRequest: LoginRequest) {
         _isLoading.value = true
-        _isError.value = null
+        _loginResult.value = null
         viewModelScope.launch {
             try {
-                val loginResponse = userRepository.postLogin(email, password)
-                when {
-                    loginResponse.loginResult != null -> {
-                        saveSession(
-                            UserModel(
-                                loginResponse.loginResult.name.toString(),
-                                loginResponse.loginResult.token.toString(),
-                                true
-                            )
+                val response = userRepository.postLogin(loginRequest)
+                if (response.user != null) {
+                    saveSession(
+                        UserModel(
+                            response.user.idUser.toString(),
+                            response.user.nama.toString(),
+                            response.user.token.toString(),
+                            true
                         )
-                        _isSuccess.value = true
-                        _loginResult.value = Result.Success(loginResponse)
-                        _isError.value = null
-                    }
-                    loginResponse.message != null -> {
-                        throw Exception(loginResponse.message)
-                    }
+                    )
                 }
-            } catch (e: HttpException) {
-                val errorBody = Gson().fromJson(e.response()?.errorBody()?.string(), ErrorResponse::class.java)
-                val errorMessage = errorBody?.message ?: e.message()
-                _isError.value = errorMessage.toString()
-                _isSuccess.value = false
-                _loginResult.value = Result.Error(errorMessage)
-            } finally {
                 _isLoading.value = false
+                _isSuccess.value = true
+                _loginResult.value = response.message
+                Log.d("LoginViewModel", "Login: ${response.message}")
+            } catch (e: HttpException) {
+                val errorBody = e.response()?.errorBody()?.string()
+                val gson = Gson()
+                val errorResponse = gson.fromJson(errorBody, ErrorResponse::class.java)
+                _isLoading.value = false
+                _isSuccess.value = false
+                _loginResult.value = errorResponse.message
+                Log.e("LoginViewModel", "Login: ${errorResponse.message}")
+            } catch (e: SocketTimeoutException) {
+                _isLoading.value = false
+                _isSuccess.value = false
+                _loginResult.value = e.message
+                Log.e("LoginViewModel", "Login: ${e.message}")
             }
         }
     }
 
     fun saveSession(user: UserModel) {
         viewModelScope.launch {
-            authRepository.saveSession(user)
+            userRepository.saveSession(user)
         }
     }
 
     fun getSession(): LiveData<UserModel> {
-        return authRepository.getLoginState().asLiveData()
-    } */
+        return userRepository.getLoginState().asLiveData()
+    }
 }

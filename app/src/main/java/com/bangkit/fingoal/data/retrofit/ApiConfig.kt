@@ -1,6 +1,7 @@
 package com.bangkit.fingoal.data.retrofit
 
 import com.bangkit.fingoal.BuildConfig
+import com.bangkit.fingoal.BuildConfig.BASE_URL
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -8,9 +9,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
-
-    private const val BASE_URL = "http://test.com"
-
     fun getApiService(token: String): ApiService {
         val loggingInterceptor = if (BuildConfig.DEBUG) {
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -20,7 +18,7 @@ object ApiConfig {
         val authInterceptor = Interceptor { chain ->
             val req = chain.request()
             val requestHeaders = req.newBuilder()
-                .addHeader("Authorization", "Bearer $token")
+                .header("Authorization", token)
                 .build()
             chain.proceed(requestHeaders)
         }

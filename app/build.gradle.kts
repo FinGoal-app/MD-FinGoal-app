@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
     id("com.google.gms.google-services")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -18,7 +19,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "BASE_URL", "\"https://test.com\"")
+        buildConfigField("String", "BASE_URL", "\"https://api-fingoal-490709244136.asia-southeast2.run.app/\"")
+        buildConfigField("String", "MODEL_URL", "\"https://api-ml-fingoal-490709244136.asia-southeast2.run.app/\"")
     }
 
     buildTypes {
@@ -95,4 +97,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
+
+    // Circle Image View
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }

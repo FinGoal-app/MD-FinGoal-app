@@ -57,7 +57,7 @@
         android:minHeight="48dp"
         android:padding="0dp"
         android:text="@string/register_here"
-        android:textColor="?android:attr/textColorLink"
+        android:textColor="@color/green"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -154,24 +154,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
-
-    <Button
-        android:id="@+id/btn_sign_in_with_google"
-        style="@style/Widget.App.Button.GoogleButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:padding="4dp"
-        android:text="@string/google_login"
-        app:cornerRadius="12dp"
-        app:icon="@drawable/google_logo"
-        app:iconGravity="textStart"
-        app:iconPadding="8dp"
-        app:iconSize="32dp"
-        app:iconTint="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_or" />
 </androidx.constraintlayout.widget.ConstraintLayout>

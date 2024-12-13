@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">FinGoal</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Dashboard</string>
     <string name="title_budget">Budget</string>
     <string name="title_goals">Goals</string>
+    <string name="title_welcome_user">Welcome, %1$s</string>
 
     <!-- Login Activity -->
     <string name="title_welcome">Login to your account</string>
@@ -12,7 +13,7 @@
     <string name="title_password">Password</string>
     <string name="title_login">Login</string>
     <string name="invalid_email">Invalid email format</string>
-    <string name="invalid_password">Password must be at least 8 characters</string>
+    <string name="invalid_password">Password must be at least 6 characters</string>
     <string name="login_success">You have successfully logged in</string>
     <string name="login_failed">Failed to login. Please check your username and password again.</string>
     <string name="or">or</string>\
@@ -23,7 +24,7 @@
     <string name="title_register">Create your account</string>
     <string name="have_an_account">Already have an account?</string>
     <string name="login_here">Login here</string>
-    <string name="title_name">Full name</string>
+    <string name="title_name">Full Name</string>
     <string name="empty_name_warning">Field cannot be empty</string>
     <string name="title_signup">Register</string>
     <string name="google_signup">Sign up with Google</string>
@@ -32,18 +33,91 @@
 
     <!-- Toolbar Menu -->
     <string name="title_profile">Profile</string>
-    <string name="titlemenu_budget">Manage Budget</string>
+    <string name="title_add">Add</string>
+    <string name="manage_budget">Manage Budget</string>
 
     <!-- Welcome Activity -->
     <string name="start">Let\'s Start</string>
     <string name="get_started">Get Started</string>
     <string name="welcome">Welcome to FinGoal</string>
 
+    <!-- Home Fragment -->
+    <string name="title_balance">Balance</string>
+    <string name="show_balance">Show or Hide Balance</string>
+    <string name="title_savings">Savings</string>
+    <string name="title_history">History</string>
+    <string name="title_income">Income</string>
+    <string name="title_expense">Expense</string>
+    <string name="balance_amount">Rp…</string>
+    <string name="savings_amount">Rp…</string>
+    <string name="income_name">Income name</string>
+    <string name="expense_name">Expense name</string>
+    <string name="income_amount">Income amount</string>
+    <string name="expense_amount">Expense amount</string>
+    <string name="savings_budget">Savings budget</string>
+    <string name="income_date">Income date</string>
+    <string name="expense_date">Expense date</string>
+    <string name="category_image">Category image</string>
+    <string name="category_transaction">Category</string>
+    <string name="transaction_name">Transaction</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="transaction_amount">Rp…</string>
+    <string name="transaction_date">Date</string>
+    <string name="transaction_time">Time</string>
+    <string name="empty_history">No history yet! Let\'s start tracking your transactions</string>
+
+    <!-- Income Expense Savings Form -->
+    <string name="income_source">Income source</string>
+    <string name="expense_purpose">Expense objective</string>
+    <string name="select_goal">Select goal</string>
+    <string name="goal_dropdown">Select your goal</string>
+
     <!-- Goals Activity -->
     <string name="empty_goals">No goals yet! Le\'ts start managing your goals!</string>
     <string name="add_goals">Add Goal</string>
+    <string name="edit_goal">Edit Goal %1$s</string>
+    <string name="edit_goal_name">Edit goal name</string>
+    <string name="edit_goal_amount">Edit amount</string>
+    <string name="edit_target_date">Edit target date</string>
+    <string name="edit_goal_desc">Edit goal description</string>
     <string name="goal_name">Goal name</string>
-    <string name="progress">Financial progress</string>
+    <string name="amount_progress">Amount progress</string>
+    <string name="month_target">Month target</string>
+    <string name="date_target">Date target</string>
+    <string name="progress">Progress</string>
+    <string name="progress_left">Progress left</string>
+    <string name="add_photo">Add photo</string>
+    <string name="goal">Add your goal</string>
+    <string name="write_goal">What\'s your goal?</string>
+    <string name="how_much">How much do you want to achieve?</string>
+    <string name="how_long">When do you want to achieve it?</string>
+    <string name="add_desc">Add your goal description (optional)</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="predict">Predict</string>
+
+    <!-- Budget Activity -->
+    <string name="title_allocation">Allocation</string>
+    <string name="budget_allocation">Budget Allocation</string>
+    <string name="empty_chart_data">No data available</string>
+    <string name="foods_predict">Ideal allocation for Foods: %1$s</string>
+    <string name="transport_predict">Ideal allocation for Transport: %1$s</string>
+    <string name="electricity_predict">Ideal allocation for Electricity: %1$s</string>
+    <string name="allocation_amount">Amount</string>
+    <string name="allocation_type">Allocation type</string>
+    <string name="empty_budget">No budget allocations yet. Le\'ts add your allocations now!</string>
+    <string name="budget_amount">Budget amount</string>
+    <string name="category">Budget category</string>
+    <string name="edit_budget">Edit %1$s Budget</string>
+    <string name="edit_category">Edit allocation category</string>
+    <string name="edit_amount">Edit allocation amount</string>
+    <string name="choose_category">Select category</string>
+    <string name="add_allocation">Add Allocation</string>
+    <string-array name="budget_category">
+        <item>Foods</item>
+        <item>Transport</item>
+        <item>Electricity</item>
+    </string-array>
 
     <!-- Skip Button -->
     <string name="skip_button">Skip</string>
@@ -53,64 +127,15 @@
     <string name="illustration_2">Illustration for intro 2</string>
     <string name="illustration_3">Illustration for intro 3</string>
     <!-- Titles -->
-    <string name="intro_title_1">Welcome, FinGoal\'s Friends!</string>
+    <string name="intro_title_1">Welcome, FinGoal Friends!</string>
     <string name="intro_title_2">Manage and Track Your Finances</string>
     <string name="intro_title_3">Achieve Your Financial Goals</string>
     <!-- Subtitles -->
     <string name="intro_subtitle_1">This app is designed to help you manage your finances.</string>
     <string name="intro_subtitle_2">Set up your desired budget categories and start keeping track of your expenses.</string>
     <string name="intro_subtitle_3">With FinGoal, realize your financial goals and enjoy the results!</string>
-    <!-- Back Button -->
-    <string name="back_navigation">Back</string>
-    <!-- Form Labels -->
-    <string name="label_choose_savings">Pilih Tabungan</string>
-    <string name="label_budget">Berapa Anggaran kamu</string>
-    <string name="label_choose_month">Pilih Bulan</string>
-    <string name="label_description">Keterangan</string>
-    <!-- Placeholder Text -->
-    <string name="hint_budget">Enter your budget</string>
-    <string name="hint_description">Enter your description</string>
-    <!-- Button Text -->
-    <string name="button_save">Simpan</string>
-    <string name="simpan">Save</string>
-    <!-- Spinner Dropdown Options (example options for months) -->
-    <string name="expense_header">Expense</string>
-    <string name="berapa_anggaran">Berapa Anggaran kamu</string>
-    <string name="enter_budget">Enter your budget</string>
-    <string name="pilih_kategori">Pilih Kategori</string>
-    <string name="pilih_tanggal">Pilih Tanggal</string>
-    <string name="hint_pilih_tanggal">Pilih Tanggal</string>
-    <string name="keterangan">Keterangan</string>
-    <string name="hint_keterangan">Enter your description</string>
-    <string name="savings">Savings</string>
-    <string name="select_savings">Pilih Tabungan</string>
-    <string name="budget_question">Berapa Anggaran kamu</string>
-    <string name="enter_budget_hint">Enter your budget</string>
-    <string name="select_date">Pilih Tanggal</string>
-    <string name="select_date_hint">Pilih Tanggal</string>
-    <string name="description">Keterangan</string>
-    <string name="enter_description_hint">Enter your description</string>
-    <string name="save">Simpan</string>
-    <string name="header_Income">Income</string>
-    <string name="pilih_tabungan">Pilih Tabungan</string>
-    <string name="hint_anggaran">Enter your budget</string>
-    <string name="hint_tanggal">Pilih Tanggal</string>
-    <string name="your_goals">Your goals</string>
-    <string name="choose_photo">Choose Photo</string>
-    <string name="set_goals">Select a goal</string>
-    <string name="make_own">Make your own</string>
-    <string name="hint_tujuan">Tulis Tujuanmu</string>
-    <string name="pilih_bulan">Pilih Bulan</string>
-    <string name="hint_pilih_bulan">Pilih Bulan</string>
-    <string name="open_calendar">Open Calendar</string>
-    <string name="increase_budget">Increase the budget</string>
-    <string name="back_button_description">Back</string>
-    <string name="how_much_budget">Berapa Anggaran kamu</string>
-    <string name="category">Kategori</string>
-    <string name="budget_type">Jenis Anggaran</string>
-    <string name="choose_date">Pilih Tanggal</string>
-    <string name="save_button">Simpan</string>
 
-
-    <string name="hello_blank_fragment">Hello, this is fragment</string>
+    <!-- Profile Activity -->
+    <string name="title_logout">LOG OUT</string>
+    <string name="logout_success">You have successfully logged out</string>
 </resources>

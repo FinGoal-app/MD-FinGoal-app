@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,37 +21,40 @@
         android:theme="@style/Theme.FinGoal"
         tools:targetApi="31">
         <activity
-            android:name=".view.activities.goals.AddGoalsActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".view.activities.budget.EditBudgetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.goals.EditGoalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.savings.SavingsFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.budget.BudgetFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.expense.ExpenseFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.income.IncomeFormActivity"
+            android:exported="false" />
         <activity
             android:name=".view.activities.intro.IntroActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".view.activities.intro.GetStartedActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".view.activities.login.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".view.activities.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.goals.GoalsFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.profile.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".view.main.MainActivity"

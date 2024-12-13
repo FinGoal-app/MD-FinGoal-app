@@ -4,4 +4,9 @@
         <item name="android:background">@drawable/toolbar_bg</item>
         <item name="colorPrimary">@color/green</item>
     </style>
+
+    <style name="ToolbarStyle2" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@drawable/mini_toolbar_bg</item>
+        <item name="colorPrimary">@color/green</item>
+    </style>
 </resources>

@@ -31,16 +31,14 @@ class PasswordEditText @JvmOverloads constructor(
                 before: Int,
                 count: Int
             ) {
-                if (s.toString().length < 8 ) {
+                if (s.toString().length < 6 ) {
                     setError(context.getString(R.string.invalid_password), null)
                 } else {
                     error = null
                 }
             }
 
-            override fun afterTextChanged(s: Editable) {
-
-            }
+            override fun afterTextChanged(s: Editable) {}
         })
     }
 

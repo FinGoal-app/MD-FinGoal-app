@@ -6,78 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".view.goals.GoalsFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="80dp">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/top_appbar"
-            style="@style/ToolbarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:minHeight="?attr/actionBarSize"
-            app:menu="@menu/toolbar_menu"
-            app:title="@string/title_goals"
-            app:titleTextColor="@color/white"
-            app:titleMarginBottom="116dp"
-            app:titleCentered="true"
-            app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" />
-    </com.google.android.material.appbar.AppBarLayout>
+        <TextView
+            android:id="@+id/tv_savings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_savings"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_savings_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_savings"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/balance_amount"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp" >
+        android:layout_marginTop="100dp">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:indicatorColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_goals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/iv_empty_goals"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/ic_empty"
-            android:visibility="visible"
-            android:contentDescription="@string/illustration_1"
-            app:layout_constraintBottom_toTopOf="@id/tv_empty_goals"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_goals" />
 
         <TextView
             android:id="@+id/tv_empty_goals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/empty_goals"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/btn_add_goals"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_goal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="36dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
             android:contentDescription="@string/add_goals"
-            android:text="@string/add_goals"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/green"
-            app:icon="@drawable/ic_add"
-            app:iconTint="@color/white"
+            android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

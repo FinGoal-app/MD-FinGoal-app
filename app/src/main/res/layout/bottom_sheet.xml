@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_content"
+    style="@style/Widget.Material3.BottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" >
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/drag_handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_add_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_transaction"
+        android:layout_marginStart="16dp"
+        android:padding="16dp"
+        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+    <TextView
+        android:id="@+id/tv_add_income"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_income"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:drawablePadding="20dp"
+        app:drawableStartCompat="@drawable/ic_income_small" />
+
+    <TextView
+        android:id="@+id/tv_add_expense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_expense"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:drawablePadding="20dp"
+        app:drawableStartCompat="@drawable/ic_expense_small" />
+
+    <TextView
+        android:id="@+id/tv_add_savings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_savings"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:drawablePadding="20dp"
+        app:drawableStartCompat="@drawable/ic_savings_small" />
+
+</LinearLayout>

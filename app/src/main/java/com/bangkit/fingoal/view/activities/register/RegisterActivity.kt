@@ -13,7 +13,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.fingoal.R
-import com.bangkit.fingoal.data.repository.Result
+import com.bangkit.fingoal.data.retrofit.RegisterRequest
 import com.bangkit.fingoal.databinding.ActivityRegisterBinding
 import com.bangkit.fingoal.view.ViewModelFactory
 import com.bangkit.fingoal.view.activities.login.LoginActivity
@@ -42,6 +42,15 @@ class RegisterActivity : AppCompatActivity() {
         viewModel.isSuccess.observe(this) { isSuccess ->
             if (isSuccess) {
                 binding.progressIndicator.visibility = View.GONE
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+
+        viewModel.registerResult.observe(this) { result ->
+            if (result != null) {
+                Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -155,30 +164,7 @@ class RegisterActivity : AppCompatActivity() {
             val name = binding.edRegisterName.text.toString()
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
-            // viewModel.register(name, email, password)
-
-            viewModel.registerResult.observe(this) { result ->
-                binding.progressIndicator.visibility = View.VISIBLE
-                when (result) {
-                    is Result.Success -> {
-                        Toast.makeText(this, getString(R.string.signup_success), Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, LoginActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }
-
-                    is Result.Error -> {
-                        binding.progressIndicator.visibility = View.GONE
-                        viewModel.isError.observe(this) { errorMessage ->
-                            if (errorMessage != null) {
-                                Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
-                            }
-                        }
-                    }
-
-                    else -> Toast.makeText(this, getString(R.string.signup_failed), Toast.LENGTH_SHORT).show()
-                }
-            }
+            viewModel.register(RegisterRequest(name, email, password))
         }
 
         binding.btnLoginHere.setOnClickListener {
@@ -195,7 +181,7 @@ class RegisterActivity : AppCompatActivity() {
 
         val isNameValid = name.isNotEmpty()
         val isEmailValid = Patterns.EMAIL_ADDRESS.matcher(email).matches() && email.isNotEmpty()
-        val isPasswordValid = password.length >= 8 && password.isNotEmpty()
+        val isPasswordValid = password.length >= 6 && password.isNotEmpty()
 
         registerButton.isEnabled = isNameValid && isEmailValid && isPasswordValid
     }

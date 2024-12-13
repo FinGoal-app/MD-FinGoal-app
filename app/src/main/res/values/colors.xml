@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="green">#4AC253</color>
+    <color name="red">#FF6347</color>
 
     <!-- Light theme. -->
     <color name="md_theme_primary">#3B693A</color>
@@ -145,7 +146,7 @@
     <color name="md_theme_surfaceContainerHigh_highContrast">#E6E9E0</color>
     <color name="md_theme_surfaceContainerHighest_highContrast">#E0E4DB</color>
 
-    <!-- Dark theme. -->
+    <!-- Dark Color -->
     <color name="md_dark_theme_primary">#A1D39A</color>
     <color name="md_dark_theme_onPrimary">#09390F</color>
     <color name="md_dark_theme_primaryContainer">#235024</color>
@@ -289,6 +290,8 @@
     <color name="md_dark_theme_surfaceContainerHighest_highContrast">#323630</color>
 
     <!-- Addon. -->
+    <color name="red_pastel">#D05656</color>
+    <color name="blue">#3681B6</color>
     <color name="main_color_disabled">#8E8E8E</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
